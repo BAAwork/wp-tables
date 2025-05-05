@@ -1,18 +1,21 @@
 # .github/workflows/daily-fetch-and-post.yml
-name: Daily Fetch and Post
+name: Daily Fetch and Update
 
-# Runs every day at 10:00 Moscow Time (MSK = UTC+3 → 07:00 UTC)
 on:
     schedule:
       - cron: '0 7 * * *'  # Запуск каждый день в 7:00
     workflow_dispatch:       # Ручной запуск
 
 jobs:
-  run-script:
+  update-fragment:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
+        with:
+          # нужно, чтобы принятые изменения могли быть запушены
+          persist-credentials: true
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Set up Python
         uses: actions/setup-python@v4
@@ -28,3 +31,18 @@ jobs:
 
       - name: Run fetch-and-post script
         run: python test_fetch_and_post.py
+
+      - name: Configure Git for push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Commit and push fragment.html
+        run: |
+          git add fragment.html
+          if git diff --cached --quiet; then
+            echo "🔄 No changes to commit"
+          else
+            git commit -m "chore: auto-update fragment.html"
+            git push
+          fi
