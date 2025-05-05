@@ -9,7 +9,7 @@ if not APIFOOTBALL_KEY:
 # 2) Fetch teams for League 39, Season 2023
 url = "https://v3.football.api-sports.io/teams"
 headers = {"x-apisports-key": APIFOOTBALL_KEY}
-params = {"league": "39", "season": "2023"}
+params = {"league": "38", "season": "2023"}
 resp = requests.get(url, headers=headers, params=params)
 resp.raise_for_status()
 
@@ -50,8 +50,7 @@ html_fragment = """
 # 4) Write to fragment.html
 output_path = "fragment.html"
 with open(output_path, "w", encoding="utf-8") as f:
-    f.write("<html><head><meta charset='utf-8'><title>Teams with Logos</title></head><body>\n")
+    # html_fragment у вас уже содержит строку вида "<table>…</table>"
     f.write(html_fragment)
-    f.write("\n</body></html>")
 
-print(f"✅ HTML fragment with logos written to {output_path}. Open it in your browser to view.")
+print(f"✅ HTML fragment with logos written to {output_path}.")
