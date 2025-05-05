@@ -3,8 +3,9 @@ name: Daily Fetch and Post
 
 # Runs every day at 10:00 Moscow Time (MSK = UTC+3 → 07:00 UTC)
 on:
-  schedule:
-    - cron: '0 7 * * *'
+    schedule:
+      - cron: '0 7 * * *'  # Запуск каждый день в 7:00
+    workflow_dispatch:       # Ручной запуск
 
 jobs:
   run-script:
