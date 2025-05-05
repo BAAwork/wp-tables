@@ -9,7 +9,7 @@ if not APIFOOTBALL_KEY:
 # 2) Fetch teams for League 39, Season 2023
 url = "https://v3.football.api-sports.io/teams"
 headers = {"x-apisports-key": APIFOOTBALL_KEY}
-params = {"league": "38", "season": "2023"}
+params = {"league": "37", "season": "2023"}
 resp = requests.get(url, headers=headers, params=params)
 resp.raise_for_status()
 
