@@ -1,0 +1,130 @@
+[
+  {
+    "logo": "https://media.api-sports.io/football/teams/8183.png",
+    "name": "Belgium U21",
+    "code": "BEL",
+    "country": "Belgium",
+    "founded": 1895,
+    "venue": "King Power at Den Dreef Stadion"
+  },
+  {
+    "logo": "https://media.api-sports.io/football/teams/8186.png",
+    "name": "Croatia U21",
+    "code": "CRO",
+    "country": "Croatia",
+    "founded": 1912,
+    "venue": "Stadion Maksimir"
+  },
+  {
+    "logo": "https://media.api-sports.io/football/teams/8188.png",
+    "name": "Czech Republic U21",
+    "code": null,
+    "country": "Czech-Republic",
+    "founded": 1901,
+    "venue": "epet ARENA"
+  },
+  {
+    "logo": "https://media.api-sports.io/football/teams/8190.png",
+    "name": "England U21",
+    "code": "ENG",
+    "country": "England",
+    "founded": 1863,
+    "venue": "Wembley Stadium"
+  },
+  {
+    "logo": "https://media.api-sports.io/football/teams/8194.png",
+    "name": "France U21",
+    "code": "FRA",
+    "country": "France",
+    "founded": 1919,
+    "venue": "Stade de France"
+  },
+  {
+    "logo": "https://media.api-sports.io/football/teams/8195.png",
+    "name": "Georgia U21",
+    "code": "GEO",
+    "country": "Georgia",
+    "founded": 1990,
+    "venue": "Boris Paichadze Dinamo Arena"
+  },
+  {
+    "logo": "https://media.api-sports.io/football/teams/8196.png",
+    "name": "Germany U21",
+    "code": null,
+    "country": "Germany",
+    "founded": 1900,
+    "venue": "Olympiastadion Berlin"
+  },
+  {
+    "logo": "https://media.api-sports.io/football/teams/8200.png",
+    "name": "Israel U21",
+    "code": null,
+    "country": "Israel",
+    "founded": 1928,
+    "venue": "National Stadium Ramat Gan"
+  },
+  {
+    "logo": "https://media.api-sports.io/football/teams/8201.png",
+    "name": "Italy U21",
+    "code": "ITA",
+    "country": "Italy",
+    "founded": 1898,
+    "venue": "Stadio Olimpico"
+  },
+  {
+    "logo": "https://media.api-sports.io/football/teams/8211.png",
+    "name": "Netherlands U21",
+    "code": "NET",
+    "country": "Netherlands",
+    "founded": 1889,
+    "venue": "Johan Cruijff ArenA"
+  },
+  {
+    "logo": "https://media.api-sports.io/football/teams/8214.png",
+    "name": "Norway U21",
+    "code": "NOR",
+    "country": "Norway",
+    "founded": 1902,
+    "venue": "Ullevaal Stadion"
+  },
+  {
+    "logo": "https://media.api-sports.io/football/teams/8216.png",
+    "name": "Portugal U21",
+    "code": "POR",
+    "country": "Portugal",
+    "founded": 1914,
+    "venue": "Estádio Nacional"
+  },
+  {
+    "logo": "https://media.api-sports.io/football/teams/8218.png",
+    "name": "Romania U21",
+    "code": "ROM",
+    "country": "Romania",
+    "founded": 1909,
+    "venue": "Arena Naţională"
+  },
+  {
+    "logo": "https://media.api-sports.io/football/teams/8224.png",
+    "name": "Spain U21",
+    "code": "SPA",
+    "country": "Spain",
+    "founded": 1913,
+    "venue": "Estadio Santiago Bernabéu"
+  },
+  {
+    "logo": "https://media.api-sports.io/football/teams/8226.png",
+    "name": "Switzerland U21",
+    "code": "SWI",
+    "country": "Switzerland",
+    "founded": 1895,
+    "venue": "St. Jakob-Park"
+  },
+  {
+    "logo": "https://media.api-sports.io/football/teams/8228.png",
+    "name": "Ukraine U21",
+    "code": "UKR",
+    "country": "Ukraine",
+    "founded": 1991,
+    "venue": "Obolon Arena"
+  }
+]
