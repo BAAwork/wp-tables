@@ -4,7 +4,7 @@ import json
 from datetime import datetime
 
 # --- Настройки API ---
-API_KEY = "5afd8c656bmshc9a3ed12270552ap13902bjsn68add3586b88"
+API_KEY = os.environ.get("RAPIDAPI_KEY")
 API_HOST = "nhl-api5.p.rapidapi.com"
 HEADERS = {
     "X-RapidAPI-Key": API_KEY,
