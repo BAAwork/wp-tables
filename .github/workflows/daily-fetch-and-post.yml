@@ -1,19 +1,21 @@
-# .github/workflows/daily-fetch-and-post.yml
-name: Daily Fetch and Update
+# .github/workflows/daily_fetch_and_update.yml
+# Автоматический запуск скрипта для обновления NHL Standings и Injuries
+
+name: Daily NHL Data Fetch and Update
 
 on:
-    schedule:
-      - cron: '0 7 * * *'  # Запуск каждый день в 7:00
-    workflow_dispatch:       # Ручной запуск
+  schedule:
+    # запуск каждый день в 7:00 UTC
+    - cron: '0 7 * * *'
+  workflow_dispatch:
 
 jobs:
-  update-fragment:
+  update-data:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
         with:
-          # нужно, чтобы принятые изменения могли быть запушены
           persist-credentials: true
           token: ${{ secrets.GITHUB_TOKEN }}
 
@@ -24,25 +26,24 @@ jobs:
 
       - name: Install dependencies
         run: |
-          if [ -f requirements.txt ]; then
-            pip install --upgrade pip
-            pip install -r requirements.txt
-          fi
+          pip install --upgrade pip
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 
-      - name: Run fetch-and-post script
-        run: python test_fetch_and_post.py
+      - name: Run NHL data fetch script
+        run: |
+          python test_fetch_and_post.py
 
-      - name: Configure Git for push
+      - name: Configure Git for commit
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
-      - name: Commit and push fragment.html
+      - name: Commit and push updated HTML
         run: |
-          git add fragment.html
+          git add output/nhl_standings.html output/nhl_injuries.html
           if git diff --cached --quiet; then
             echo "🔄 No changes to commit"
           else
-            git commit -m "chore: auto-update fragment.html"
+            git commit -m "chore: auto-update NHL output files"
             git push
           fi
